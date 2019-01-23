@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  locale_de,  Filesrc, FileUtil, lazutf8, Classes, SysUtils, Forms,
+  Filesrc, FileUtil, lazutf8, Classes, SysUtils, Forms,
   Controls, Graphics, Dialogs, ExtCtrls, EditBtn, StdCtrls, ComCtrls,
   IniPropStorage, MaskEdit, Menus, Buttons, UniqueInstance, DateUtils, LCLType {$IFDEF windows} , MMSystem  {$ENDIF };
 

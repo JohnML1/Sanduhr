@@ -20,7 +20,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="14" Y="8"/>
+        <CursorPos X="3" Y="8"/>
         <UsageCount Value="63"/>
         <Bookmarks Count="1">
           <Item0 Y="83" ID="1"/>
@@ -42,7 +42,6 @@
       </Unit2>
       <Unit3>
         <Filename Value="..\comp\locale_de.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="8" Y="2"/>
         <UsageCount Value="21"/>
