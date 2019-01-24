@@ -7,7 +7,7 @@ interface
 uses
   FileUtil, lazutf8, Classes, SysUtils, Forms,
   Controls, Graphics, Dialogs, ExtCtrls, EditBtn, StdCtrls, ComCtrls,
-  IniPropStorage, MaskEdit, Menus, Buttons, UniqueInstance, DateUtils, LCLType {$IFDEF windows} , MMSystem  {$ENDIF };
+  IniPropStorage, MaskEdit, Menus, Buttons, UniqueInstance, DateUtils, LCLType;
 
 type
 
