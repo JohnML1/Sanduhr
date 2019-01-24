@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Filesrc, FileUtil, lazutf8, Classes, SysUtils, Forms,
+  FileUtil, lazutf8, Classes, SysUtils, Forms,
   Controls, Graphics, Dialogs, ExtCtrls, EditBtn, StdCtrls, ComCtrls,
   IniPropStorage, MaskEdit, Menus, Buttons, UniqueInstance, DateUtils, LCLType {$IFDEF windows} , MMSystem  {$ENDIF };
 
@@ -15,9 +15,7 @@ type
 
   TForm1 = class(TForm)
     ApplicationProperties1: TApplicationProperties;
-    cbPLay: TCheckBox;
     EditZeitspanne: TMaskEdit;
-    FileSource1: TFileSource;
     IniPropStorage1: TIniPropStorage;
     Label1: TLabel;
     MenuItem1: TMenuItem;
@@ -62,9 +60,11 @@ uses unit2;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-  //EditZeitspanne.SetFocus;
+  EditZeitspanne.SetFocus;
   EditZeitspanne.SelStart:=3;
   EditZeitspanne.SelLength:=2;
+  EditZeitspanne.Invalidate;
+  Application.ProcessMessages;
   //EditZeitspanne.SetFocus;
 
 end;
@@ -93,17 +93,6 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   IniPropStorage1.IniFileName:=ChangeFileExt(Application.ExeName,'.ini');
-  SoundFile := ChangeFileExt(Application.ExeName,'.wav');
-
-  (* SoundFile in ExePath auspacken *)
-  if not FileExists(SoundFile) then
-  begin
-    CopyFile(FileSource1.FileName,SoundFile);
-  end;
-
-  {$IFDEF linux}
-    cbPLay.Enabled := false;
-  {$ENDIF }
 
 end;
 
@@ -155,26 +144,10 @@ begin
      Timer1.Enabled:=false;
      TrayIcon1.Visible:=false;
      Application.MainForm.Visible := true;
-     {$IFDEF windows}
-     if cbPLay.Checked then
-     begin
-      while secs1 < 3 do
-      begin
-        Application.ProcessMessages;
-
-        if FileExists(SoundFile) then
-        sndPlaySound(pchar(UTF8ToSys(SoundFile)), snd_Async or snd_NoDefault);
-
-        Application.ProcessMessages;
-
-        inc(secs1)
-
-      end;
-     end;
-
-     {$ENDIF }
+     Application.ProcessMessages;
 
      FrmAlaram.ShowModal;
+     Application.ProcessMessages;
 
 
   end;
