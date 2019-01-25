@@ -115,6 +115,7 @@ object Form1: TForm1
       MaxLength = 8
       ParentFont = False
       TabOrder = 2
+      OnChange = EditZeitspanneChange
       EditMask = '00:00:00;1;_'
       Text = '00:03:00'
       TextHint = '00:03:00'
@@ -193,7 +194,7 @@ object Form1: TForm1
     HintColor = clRed
     Title = 'Sanduhr'
     OnHint = ApplicationProperties1Hint
-    left = 200
+    left = 104
     top = 125
   end
   object Timer1: TTimer

@@ -5,9 +5,9 @@ unit Unit1;
 interface
 
 uses
-  FileUtil, lazutf8, Classes, SysUtils, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, EditBtn, StdCtrls, ComCtrls,
-  IniPropStorage, MaskEdit, Menus, Buttons, UniqueInstance, DateUtils, LCLType;
+  FileUtil, lazutf8, Classes, SysUtils, Forms, Controls, Graphics, Dialogs,
+  ExtCtrls, EditBtn, StdCtrls, ComCtrls, IniPropStorage, MaskEdit, Menus,
+  Buttons, UniqueInstance,  DateUtils, LCLType,crt;
 
 type
 
@@ -29,6 +29,7 @@ type
     UniqueInstance1: TUniqueInstance;
     UpDown1: TUpDown;
     procedure ApplicationProperties1Hint(Sender: TObject);
+    procedure EditZeitspanneChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
@@ -42,6 +43,7 @@ type
   private
 
   public
+    function  CheckTime(ToCheck : String): boolean;
 
   end;
 
@@ -101,6 +103,13 @@ begin
   EditZeitspanne.Hint:=EditZeitspanne.Caption;
 end;
 
+procedure TForm1.EditZeitspanneChange(Sender: TObject);
+var val : string;
+begin
+  val := EditZeitspanne.EditText;
+  CheckTime(val);
+end;
+
 procedure TForm1.Anzeigen(Sender: TObject);
 begin
    Application.MainForm.Visible:=true;
@@ -154,7 +163,15 @@ begin
 end;
 
 procedure TForm1.TimerEinschaltenClick(Sender: TObject);
+var val : string;
 begin
+   val := EditZeitspanne.EditText;
+   if not CheckTime(val) then
+   begin
+      raise Exception.Create(val + ' konnte nicht in Zeit umgewandelt werden!');
+   end;
+
+
    SecsCount := 0;
    TrayIcon1.Visible:=true;
    Timer1.Enabled:= true ;
@@ -211,9 +228,9 @@ begin
 
 
   (* Prüfung obs zu TTime konvertiert werden kann *)
-  val := StrToTimeDef(EditZeitspanne.Text,0);
-  if val = 0 then
-  Exception.Create(EditZeitspanne.Text + ' konnte nicht in Zeit umgewandelt werden!');
+  val := StrToTimeDef(EditZeitspanne.EditText,-1);
+  if val = -1 then
+   raise  Exception.Create(EditZeitspanne.EditText + ' konnte nicht in Zeit umgewandelt werden!');
 
 
   (* Zeit erhöhen *)
@@ -264,6 +281,21 @@ begin
   EditZeitspanne.Refresh;
   Application.ProcessMessages;
   end;
+
+end;
+
+function TForm1.CheckTime(ToCheck: String): boolean;
+var val : string;
+begin
+    (* checken ob korrekte Zeit eingegeben *)
+    StatusBar1.SimpleText := '';
+    Result := true;
+    val := EditZeitspanne.EditText;
+    if StrToTimeDef(val,-1) = -1 then
+    begin
+     Result := false;
+     StatusBar1.SimpleText := EditZeitspanne.EditText  + ' ist keine korrekte Zeit!';
+    end;
 
 end;
 
