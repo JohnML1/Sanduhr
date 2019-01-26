@@ -1,14 +1,14 @@
 object Form1: TForm1
   Left = 572
-  Height = 192
+  Height = 204
   Top = 183
-  Width = 398
+  Width = 422
   BorderStyle = bsDialog
   Caption = 'Sanduhr'
-  ClientHeight = 192
-  ClientWidth = 398
-  DesignTimePPI = 100
-  Font.Height = -12
+  ClientHeight = 204
+  ClientWidth = 422
+  DesignTimePPI = 106
+  Font.Height = -13
   KeyPreview = True
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
@@ -18,34 +18,34 @@ object Form1: TForm1
   LCLVersion = '2.1.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 166
+    Height = 179
     Top = 0
-    Width = 398
+    Width = 422
     Align = alClient
     Alignment = taLeftJustify
     Caption = '   Zeitspanne einstellen und ''start'' klicken ( ENTER-Taste )'
-    ClientHeight = 166
-    ClientWidth = 398
-    Font.Height = -13
+    ClientHeight = 179
+    ClientWidth = 422
+    Font.Height = -14
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 16
-      Height = 18
-      Top = 18
-      Width = 328
+      Left = 17
+      Height = 19
+      Top = 19
+      Width = 335
       Caption = 'Zeitspanne (Std:Min:Sek) auch mit Pfeiltaste einstellbar:'
-      Font.Height = -13
+      Font.Height = -14
       ParentColor = False
       ParentFont = False
     end
     object UpDown1: TUpDown
-      Left = 124
-      Height = 28
+      Left = 131
+      Height = 30
       Hint = '|Stoppuhr einstellen'
-      Top = 36
-      Width = 18
+      Top = 38
+      Width = 19
       ArrowKeys = False
       Max = 60
       Min = 1
@@ -56,13 +56,13 @@ object Form1: TForm1
       Thousands = False
     end
     object TimerEinschalten: TBitBtn
-      Left = 228
-      Height = 26
+      Left = 242
+      Height = 28
       Hint = '|startet die Sanduhr'
-      Top = 36
-      Width = 117
+      Top = 38
+      Width = 124
       Caption = '&start'
-      Font.Height = -13
+      Font.Height = -14
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         200000000000000400006400000064000000000000000000000000108300000C
@@ -104,14 +104,14 @@ object Form1: TForm1
       TabOrder = 1
     end
     object EditZeitspanne: TMaskEdit
-      Left = 16
-      Height = 28
+      Left = 17
+      Height = 27
       Hint = 'Sanduhr Zeit einstellen'
-      Top = 36
-      Width = 108
+      Top = 38
+      Width = 114
       Alignment = taCenter
       CharCase = ecNormal
-      Font.Height = -13
+      Font.Height = -14
       MaxLength = 8
       ParentFont = False
       TabOrder = 2
@@ -124,19 +124,19 @@ object Form1: TForm1
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 26
-    Top = 166
-    Width = 398
+    Height = 25
+    Top = 179
+    Width = 422
     AutoHint = True
-    Font.Height = -12
+    Font.Height = -13
     Panels = <>
     ParentFont = False
     ParentShowHint = False
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
-    left = 25
-    top = 66
+    left = 27
+    top = 70
   end
   object TrayIcon1: TTrayIcon
     BalloonFlags = bfInfo
@@ -182,30 +182,30 @@ object Form1: TForm1
       0000
     }
     OnClick = TrayIcon1Click
-    left = 158
-    top = 66
+    left = 167
+    top = 70
   end
   object UniqueInstance1: TUniqueInstance
-    left = 92
-    top = 66
+    left = 98
+    top = 70
   end
   object ApplicationProperties1: TApplicationProperties
     Hint = 'Sanduhr'
     HintColor = clRed
     Title = 'Sanduhr'
     OnHint = ApplicationProperties1Hint
-    left = 104
-    top = 125
+    left = 110
+    top = 133
   end
   object Timer1: TTimer
     Enabled = False
     OnTimer = Timer1Timer
-    left = 258
-    top = 125
+    left = 273
+    top = 133
   end
   object PopupTrayIcon: TPopupMenu
-    left = 225
-    top = 66
+    left = 239
+    top = 70
     object MenuItem1: TMenuItem
       Caption = '&anzeigen'
       OnClick = Anzeigen
