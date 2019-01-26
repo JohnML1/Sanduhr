@@ -20,12 +20,19 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
+<<<<<<< HEAD
         <TopLine Value="119"/>
         <CursorPos X="2" Y="122"/>
         <UsageCount Value="73"/>
         <Bookmarks Count="2">
           <Item0 X="3" Y="299" ID="2"/>
           <Item1 X="4" Y="171" ID="1"/>
+=======
+        <CursorPos X="14" Y="8"/>
+        <UsageCount Value="63"/>
+        <Bookmarks Count="1">
+          <Item0 Y="83" ID="1"/>
+>>>>>>> parent of 13eb9eb... OHNE locale_de
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -46,6 +53,7 @@
       </Unit2>
       <Unit3>
         <Filename Value="..\comp\locale_de.pas"/>
+        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="8" Y="2"/>
         <UsageCount Value="20"/>

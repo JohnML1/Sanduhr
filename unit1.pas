@@ -5,9 +5,15 @@ unit Unit1;
 interface
 
 uses
+<<<<<<< HEAD
   FileUtil, lazutf8, Classes, SysUtils, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, EditBtn, StdCtrls, ComCtrls, IniPropStorage, MaskEdit, Menus,
   Buttons, UniqueInstance,  DateUtils, LCLType,crt;
+=======
+  locale_de,  Filesrc, FileUtil, lazutf8, Classes, SysUtils, Forms,
+  Controls, Graphics, Dialogs, ExtCtrls, EditBtn, StdCtrls, ComCtrls,
+  IniPropStorage, MaskEdit, Menus, Buttons, UniqueInstance, DateUtils, LCLType {$IFDEF windows} , MMSystem  {$ENDIF };
+>>>>>>> parent of 13eb9eb... OHNE locale_de
 
 type
 
