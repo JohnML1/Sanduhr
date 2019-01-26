@@ -20,10 +20,14 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <BuildNr Value="129"/>
 =======
       <BuildNr Value="80"/>
 >>>>>>> parent of 13eb9eb... OHNE locale_de
+=======
+      <BuildNr Value="122"/>
+>>>>>>> parent of 437f045... Soweit ok
       <StringTable Comments="Sanduhr fürs Teekochen" CompanyName="Quicky" ProductVersion="0.0.0.0"/>
     </VersionInfo>
     <BuildModes Count="3">
