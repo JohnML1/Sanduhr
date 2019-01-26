@@ -19,15 +19,7 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <BuildNr Value="129"/>
-=======
-      <BuildNr Value="80"/>
->>>>>>> parent of 13eb9eb... OHNE locale_de
-=======
-      <BuildNr Value="122"/>
->>>>>>> parent of 437f045... Soweit ok
+      <BuildNr Value="130"/>
       <StringTable Comments="Sanduhr fürs Teekochen" CompanyName="Quicky" ProductVersion="0.0.0.0"/>
     </VersionInfo>
     <BuildModes Count="3">
@@ -41,7 +33,6 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="..\comp"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -81,7 +72,6 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="..\comp"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -113,7 +103,6 @@
         <Mode0 Name="default"/>
       </Modes>
     </RunParams>
-<<<<<<< HEAD
     <RequiredPackages Count="2">
       <Item1>
         <PackageName Value="uniqueinstance_package"/>
@@ -121,23 +110,8 @@
       <Item2>
         <PackageName Value="LCL"/>
       </Item2>
-=======
-    <RequiredPackages Count="4">
-      <Item1>
-        <PackageName Value="rxnew"/>
-      </Item1>
-      <Item2>
-        <PackageName Value="filesource"/>
-      </Item2>
-      <Item3>
-        <PackageName Value="uniqueinstance_package"/>
-      </Item3>
-      <Item4>
-        <PackageName Value="LCL"/>
-      </Item4>
->>>>>>> parent of 13eb9eb... OHNE locale_de
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="3">
       <Unit0>
         <Filename Value="Sanduhr.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -158,10 +132,6 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit2"/>
       </Unit2>
-      <Unit3>
-        <Filename Value="..\comp\locale_de.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -172,7 +142,6 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\comp"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
