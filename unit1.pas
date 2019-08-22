@@ -94,7 +94,8 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  IniPropStorage1.IniFileName:=ChangeFileExt(Application.ExeName,'.ini');
+   // in /home speichern statt
+  //IniPropStorage1.IniFileName:=ChangeFileExt(Application.ExeName,'.ini');
 
 end;
 
