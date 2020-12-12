@@ -1,7 +1,7 @@
 object FrmAlaram: TFrmAlaram
-  Left = 488
+  Left = 646
   Height = 660
-  Top = 150
+  Top = 418
   Width = 753
   BorderStyle = bsDialog
   Caption = 'Alarm!!!'
@@ -12,7 +12,7 @@ object FrmAlaram: TFrmAlaram
   OnKeyDown = FormKeyDown
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '1.9.0.0'
+  LCLVersion = '2.1.0.0'
   WindowState = wsFullScreen
   object Panel1: TPanel
     Left = 0
@@ -22,6 +22,7 @@ object FrmAlaram: TFrmAlaram
     Align = alClient
     ClientHeight = 660
     ClientWidth = 753
+    ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 1
@@ -48,9 +49,31 @@ object FrmAlaram: TFrmAlaram
       Width = 751
       Align = alTop
       Caption = 'Panel2'
+      ClientHeight = 50
+      ClientWidth = 751
       Font.Height = -32
       ParentFont = False
       TabOrder = 0
+      object Edit1: TEdit
+        Left = 592
+        Height = 48
+        Top = 1
+        Width = 158
+        Align = alRight
+        Alignment = taCenter
+        Font.Height = -30
+        ParentColor = True
+        ParentFont = False
+        TabOrder = 0
+        Text = 'Edit1'
+      end
     end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    OnStartTimer = Timer1StartTimer
+    left = 557
+    top = 12
   end
 end
