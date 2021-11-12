@@ -1,14 +1,14 @@
 object Form1: TForm1
   Left = 572
-  Height = 194
+  Height = 186
   Top = 183
-  Width = 398
+  Width = 382
   BorderStyle = bsDialog
   Caption = 'Sanduhr'
-  ClientHeight = 194
-  ClientWidth = 398
-  DesignTimePPI = 100
-  Font.Height = -14
+  ClientHeight = 186
+  ClientWidth = 382
+  Font.Height = -13
+  Font.Name = 'Noto Sans Mono'
   KeyPreview = True
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
@@ -16,37 +16,36 @@ object Form1: TForm1
   OnShowHint = FormShowHint
   SessionProperties = 'EditZeitspanne.Text;cbPLay.Checked'
   ShowHint = True
-  LCLVersion = '2.1.0.0'
+  LCLVersion = '2.3.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 169
+    Height = 165
     Top = 0
-    Width = 398
+    Width = 382
     Align = alClient
     Alignment = taLeftJustify
     Caption = '   Zeitspanne einstellen und ''start'' klicken ( ENTER-Taste )'
-    ClientHeight = 169
-    ClientWidth = 398
-    Font.Height = -15
+    ClientHeight = 165
+    ClientWidth = 382
+    Font.Height = -14
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 15
-      Height = 22
+      Left = 14
+      Height = 18
       Top = 9
-      Width = 380
+      Width = 346
       Caption = 'Zeitspanne (Std:Min:Sek) auch mit Pfeiltaste einstellbar:'
-      Font.Height = -15
-      ParentColor = False
+      Font.Height = -14
       ParentFont = False
     end
     object UpDown1: TUpDown
-      Left = 124
-      Height = 28
+      Left = 119
+      Height = 27
       Hint = '|Stoppuhr einstellen'
-      Top = 35
-      Width = 18
+      Top = 34
+      Width = 17
       ArrowKeys = False
       Max = 60
       Min = 1
@@ -57,13 +56,13 @@ object Form1: TForm1
       Thousands = False
     end
     object TimerEinschalten: TBitBtn
-      Left = 228
-      Height = 26
+      Left = 219
+      Height = 25
       Hint = '|startet die Sanduhr'
-      Top = 35
-      Width = 117
+      Top = 34
+      Width = 112
       Caption = '&start'
-      Font.Height = -15
+      Font.Height = -14
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         200000000000000400006400000064000000000000000000000000108300000C
@@ -105,14 +104,13 @@ object Form1: TForm1
       TabOrder = 1
     end
     object EditZeitspanne: TMaskEdit
-      Left = 16
-      Height = 30
+      Left = 15
+      Height = 28
       Hint = 'Sanduhr Zeit einstellen'
-      Top = 35
-      Width = 106
+      Top = 34
+      Width = 102
       Alignment = taCenter
-      CharCase = ecNormal
-      Font.Height = -15
+      Font.Height = -14
       MaxLength = 8
       ParentFont = False
       TabOrder = 2
@@ -125,19 +123,19 @@ object Form1: TForm1
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 25
-    Top = 169
-    Width = 398
+    Height = 21
+    Top = 165
+    Width = 382
     AutoHint = True
-    Font.Height = -14
+    Font.Height = -13
     Panels = <>
     ParentFont = False
     ParentShowHint = False
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
-    left = 350
-    top = 125
+    Left = 336
+    Top = 120
   end
   object TrayIcon1: TTrayIcon
     BalloonFlags = bfInfo
@@ -184,30 +182,30 @@ object Form1: TForm1
       0000
     }
     OnClick = TrayIcon1Click
-    left = 283
-    top = 125
+    Left = 272
+    Top = 120
   end
   object UniqueInstance1: TUniqueInstance
-    left = 117
-    top = 57
+    Left = 112
+    Top = 55
   end
   object ApplicationProperties1: TApplicationProperties
     Hint = 'Sanduhr'
     HintColor = clRed
     Title = 'Sanduhr'
     OnHint = ApplicationProperties1Hint
-    left = 25
-    top = 125
+    Left = 24
+    Top = 120
   end
   object Timer1: TTimer
     Enabled = False
     OnTimer = Timer1Timer
-    left = 225
-    top = 125
+    Left = 216
+    Top = 120
   end
   object PopupTrayIcon: TPopupMenu
-    left = 225
-    top = 66
+    Left = 216
+    Top = 63
     object MenuItem1: TMenuItem
       Caption = '&anzeigen'
       OnClick = Anzeigen
@@ -231,7 +229,7 @@ object Form1: TForm1
     TitleFont.Height = -17
     TitleFont.Style = [fsBold]
     Visible = False
-    left = 143
-    top = 125
+    Left = 137
+    Top = 120
   end
 end

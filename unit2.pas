@@ -48,6 +48,8 @@ begin
   begin
     FrmAlaram.Close;
     Application.Restore;
+    Application.ProcessMessages;
+    Application.MainForm.Close;
   end;
 end;
 

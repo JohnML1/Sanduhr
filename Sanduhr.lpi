@@ -19,7 +19,7 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
-      <BuildNr Value="261"/>
+      <BuildNr Value="315"/>
       <StringTable Comments="Sanduhr fürs Teekochen" CompanyName="Quicky" ProductVersion="0.0.0.0"/>
     </VersionInfo>
     <BuildModes>

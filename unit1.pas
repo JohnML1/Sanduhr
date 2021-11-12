@@ -6,7 +6,8 @@ interface
 
 uses
   FileUtil, lazutf8, Classes, SysUtils, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls,  StdCtrls, ComCtrls, IniPropStorage, MaskEdit, Menus,
+  ExtCtrls,
+  StdCtrls, ComCtrls, IniPropStorage, MaskEdit, Menus,
   Buttons, UniqueInstance, DateUtils, LCLType, PopupNotifier, crt;
 
 type
@@ -105,6 +106,8 @@ end;
 procedure TForm1.ApplicationProperties1Hint(Sender: TObject);
 begin
   EditZeitspanne.Hint := EditZeitspanne.Caption;
+  EditZeitspanne.Refresh;
+  Application.MainForm.Invalidate;
 end;
 
 procedure TForm1.EditZeitspanneChange(Sender: TObject);
@@ -155,6 +158,7 @@ begin
 
   Statusbar1.SimpleText := ' noch: ' + FormatDateTime('hh:nn:ss', val - SecsCountTime);
   TrayIcon1.Hint := Statusbar1.SimpleText;
+  Application.ProcessMessages;
 
   (* verbleidende Zeit anzeiogen *)
   if PopupNotifier1.Visible then
